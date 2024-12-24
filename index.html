@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>School Management System</h1>
+            <nav>
+                <button onclick="showSection('students')">Students</button>
+                <button onclick="showSection('teachers')">Teachers</button>
+                <button onclick="showSection('classes')">Classes</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Students Section -->
+            <section id="students" class="section">
+                <h2>Students Management</h2>
+                <form id="studentForm">
+                    <input type="text" id="studentFirstName" placeholder="First Name" required>
+                    <input type="text" id="studentLastName" placeholder="Last Name" required>
+                    <input type="email" id="studentEmail" placeholder="Email" required>
+                    <input type="text" id="studentGrade" placeholder="Grade" required>
+                    <button type="submit">Add Student</button>
+                </form>
+                <div id="studentsList"></div>
+            </section>
+
+            <!-- Teachers Section -->
+            <section id="teachers" class="section" style="display: none;">
+                <h2>Teachers Management</h2>
+                <form id="teacherForm">
+                    <input type="text" id="teacherFirstName" placeholder="First Name" required>
+                    <input type="text" id="teacherLastName" placeholder="Last Name" required>
+                    <input type="email" id="teacherEmail" placeholder="Email" required>
+                    <input type="text" id="teacherSubject" placeholder="Subject" required>
+                    <button type="submit">Add Teacher</button>
+                </form>
+                <div id="teachersList"></div>
+            </section>
+
+            <!-- Classes Section -->
+            <section id="classes" class="section" style="display: none;">
+                <h2>Classes Management</h2>
+                <form id="classForm">
+                    <input type="text" id="className" placeholder="Class Name" required>
+                    <select id="teacherSelect"></select>
+                    <button type="submit">Add Class</button>
+                </form>
+                <div id="classesList"></div>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
